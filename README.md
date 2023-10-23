@@ -1,5 +1,6 @@
 # Notepad
 C# based Notepad
 
-![image](https://github.com/hexsparky/Notepad/assets/111631956/e7ebc00e-f256-4706-bfa8-235179d6d747)
+![изображение](https://github.com/hexsparky/Notepad/assets/111631956/2127b172-fe15-4b28-8420-43fffeb21baf)
+
 
