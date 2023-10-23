@@ -1,4 +1,4 @@
-﻿using Notepad.Windows;
+using Notepad.Windows;
 using System.IO;
 using System.Windows.Forms;
 
@@ -9,15 +9,11 @@ namespace Notepad.Core
         private static string _savedFileLocation;
         private static bool _saved = false;
 
-        public static void NewFileCreate(RichTextBox richTextBox, mainWin mainWin)
+        public static void NewFileCreate(RichTextBox richTextBox, Form mainWin)
         {
-            if (_saved)
-            {
-                mainWin.Text = "Untitled - Notepad";
-                richTextBox.Clear();
-                _saved = false;
-            }
-            else richTextBox.Clear();
+             mainWin.Text = "Untitled - Notepad";
+             richTextBox.Clear();
+             _saved = false;
         }
         public static void Exit()
         {
@@ -35,7 +31,7 @@ namespace Notepad.Core
         {
             richTextBox.Redo();
         }
-        public static void Save(RichTextBox richTextBox,SaveFileDialog saveFileDialog,mainWin mainWin)
+        public static void Save(RichTextBox richTextBox,SaveFileDialog saveFileDialog,Form mainWin)
         {
             if (_saved == false)
             {
@@ -58,7 +54,7 @@ namespace Notepad.Core
                 }
             }
         }
-        public static void Open(RichTextBox richTextBox,OpenFileDialog openFileDialog,mainWin mainWin)
+        public static void Open(RichTextBox richTextBox,OpenFileDialog openFileDialog,Form mainWin)
         {
             if(openFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -73,7 +69,7 @@ namespace Notepad.Core
         {
             richTextBox.ZoomFactor = value;
         }
-        public static void About(aboutWin aboutWin)
+        public static void About(Form aboutWin)
         {
             aboutWin.ShowDialog();
         }
